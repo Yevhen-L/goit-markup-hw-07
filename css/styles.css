@@ -1152,7 +1152,7 @@ background: var(--brand-color-cornflower);
   justify-content: center;
   /* margin-left: auto; */
   color: var(--brand-color-navy);
-  /* background: var(--brand-color-white); */
+  background: var(--brand-color-white);
   width: 32px;
   height: 22px;
   border: none;
