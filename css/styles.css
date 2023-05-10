@@ -150,15 +150,23 @@ button {
 }
 .header-box {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 }
 
 /* NAV */
 
 .nav {
-  display: flex;
-  align-items: center;
-  margin-right: auto;
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .nav {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+  }
 }
 .nav-link {
   display: flex;
@@ -166,22 +174,34 @@ button {
   gap: 40px;
   margin: 0;
 }
+
 /* .nav-link-item {
   position: relative;
 } */
 
-.logo-w {
-  color: var(--brand-color-iris);
-  font-family: var(--secondary-font-raleway);
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  margin-right: 76px;
-  text-decoration: none;
-  padding: 0;
+@media only screen and (min-width: 428px) {
+  .logo-w {
+    color: var(--brand-color-iris);
+    font-family: var(--secondary-font-raleway);
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-right: 76px;
+    text-decoration: none;
+    padding-top: 24px;
+    padding-bottom: 22px;
+  }
 }
+
+@media only screen and (min-width: 768px) {
+  .logo-w {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
 .header-logo-navy {
   color: var(--brand-color-navy);
 }
@@ -234,21 +254,37 @@ button {
   font-style: normal;
 }
 .address-link {
-  display: flex;
-  align-items: center;
-  gap: 40px;
+  display: none;
 }
-.address-header {
-  color: var(--brand-color-slate);
-  font-style: normal;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+  .address-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .address-link {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .address-header {
+    color: var(--brand-color-slate);
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 .address-header:hover,
 .address-header:focus {
@@ -256,15 +292,27 @@ button {
 }
 /* .address-link-item {
 } */
-.menu-toggle {
-}
-.js-open-menu {
-}
-.mobile-icon-hamburger {
+
+/* .mobile-icon-hamburger {
+  color: var(--brand-color-navy);
   fill: var(--brand-color-navy);
-  border: none;
-  background: none;
-}
+  width: 32px;
+  height: 22px;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  /* border-radius: 50%; */
+fill: var(--brand-color-navy);
+background: var(--brand-color-cornflower);
+/* border: 1px solid rgba(0, 0, 0, 0.1); */
+/* transition-property: border, background-color, fill; 
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+} */
 
 /**
   |============================
@@ -1092,20 +1140,38 @@ button {
   | MOBILE-MENU
   |============================
 */
-.menu-toggle {
-  min-height: 40px;
-  min-width: 40px;
+.mobile-icon-close {
+  /* transition-property: border, background-color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+}
+
+.mobile-open {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  cursor: pointer;
+  /* margin-left: auto; */
+  color: var(--brand-color-navy);
+  /* background: var(--brand-color-white); */
+  width: 32px;
+  height: 22px;
   border: none;
+}
+
+.mobile-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-left: auto;
   border-radius: 50%;
-  outline: none;
+  fill: var(--brand-color-navy);
+  background: var(--brand-color-white);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 @media (min-width: 768px) {
@@ -1116,7 +1182,7 @@ button {
 
 .menu-toggle:hover,
 .menu-toggle:focus {
-  background-color: rgba(0, 0, 0, 0.1);
+  color: var(--brand-color-ocean);
 }
 
 .menu-container {
@@ -1126,9 +1192,8 @@ button {
   width: 100vw;
   height: 100vh;
   padding: 32px;
-  background-color: #3f51b5;
-  z-index: 999;
-
+  background-color: var(--brand-color-white);
+  z-index: var(--z-1000);
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
 }
@@ -1137,22 +1202,54 @@ button {
   transform: translateX(0);
 }
 
-.menu-container .menu-toggle {
+/* .menu-container .menu-toggle {
   position: absolute;
   top: 16px;
   right: 16px;
   color: #fff;
-}
+} */
 
 .mobile-menu {
   padding: 0;
   margin: 0;
-  list-style: none;
+  /* list-style: none; */
 }
 
-.mobile-menu .link {
+.mobile-menu {
   display: block;
   padding: 10px;
-  color: #fff;
+  color: var(--brand-color-navy);
   text-decoration: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  letter-spacing: 0.02em;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  letter-spacing: 0.02em;
+}
+.mobile-nav-menu {
+  /* width: 100%;
+  display: block;
+  margin: 0;
+  color: var(--brand-color-navy);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  position: relative;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+}
+.mobile-nav-menu:hover,
+.mobile-nav-menu:focus {
+  color: var(--brand-color-ocean);
 }
