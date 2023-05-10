@@ -1191,7 +1191,7 @@ background: var(--brand-color-cornflower);
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 32px;
+  padding: 40px;
   background-color: var(--brand-color-white);
   z-index: var(--z-1000);
   transform: translateX(100%);
@@ -1252,4 +1252,11 @@ background: var(--brand-color-cornflower);
 .mobile-nav-menu:hover,
 .mobile-nav-menu:focus {
   color: var(--brand-color-ocean);
+}
+
+.mobile-social-icons-list {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 56px;
 }
