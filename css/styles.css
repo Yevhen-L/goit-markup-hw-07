@@ -101,12 +101,35 @@ button {
   color: var(--brand-color-slate);
   background-color: var(--brand-color-white);
 }
+
+/* phone */
 .container {
-  width: 1158px;
-  padding-left: 15px;
-  padding-right: 15px;
+  min-width: 320px;
+  max-width: 428px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+/* tablet */
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+/* descktop */
+
+@media only screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 /**
@@ -231,7 +254,16 @@ button {
 .address-header:focus {
   color: var(--brand-color-ocean);
 }
-.address-link-item {
+/* .address-link-item {
+} */
+.menu-toggle {
+}
+.js-open-menu {
+}
+.mobile-icon-hamburger {
+  fill: var(--brand-color-navy);
+  border: none;
+  background: none;
 }
 
 /**
@@ -378,8 +410,16 @@ button {
   |============================
 */
 .our-works {
-  padding-bottom: 120px;
+  display: none;
 }
+
+@media only screen and (min-width: 1158px) {
+  .our-works {
+    display: inline-block;
+    padding-bottom: 120px;
+  }
+}
+
 /* .works-box {} */
 .works-list {
   display: flex;
@@ -392,6 +432,7 @@ button {
 .works {
   margin-bottom: 72px;
 }
+
 /* .title-section {} */
 /**
   |============================
@@ -1044,4 +1085,74 @@ button {
   background-color: var(--brand-color-ocean);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
+}
+
+/**
+  |============================
+  | MOBILE-MENU
+  |============================
+*/
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+  background-color: #3f51b5;
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: #fff;
+}
+
+.mobile-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.mobile-menu .link {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
 }
