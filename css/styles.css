@@ -123,6 +123,7 @@ button {
 
 @media only screen and (min-width: 768px) {
   .container {
+    min-width: 320px;
     max-width: 768px;
   }
 }
@@ -131,6 +132,7 @@ button {
 
 @media only screen and (min-width: 1158px) {
   .container {
+    min-width: 320px;
     max-width: 1158px;
     padding-left: 15px;
     padding-right: 15px;
@@ -300,7 +302,6 @@ button {
 }
 /* .address-link-item {
 } */
-
 /* .mobile-icon-hamburger {
   color: var(--brand-color-navy);
   fill: var(--brand-color-navy);
@@ -314,8 +315,8 @@ button {
   justify-content: center;
   margin-left: auto;
   /* border-radius: 50%; */
-fill: var(--brand-color-navy);
-background: var(--brand-color-cornflower);
+/* fill: var(--brand-color-navy); */
+/* background: var(--brand-color-cornflower); */
 /* border: 1px solid rgba(0, 0, 0, 0.1); */
 /* transition-property: border, background-color, fill; 
   transition-duration: 250ms;
@@ -409,7 +410,6 @@ background: var(--brand-color-cornflower);
     }
   }
 }
-
 @media only screen and (min-width: 320px) {
   .hero-text {
     color: var(--brand-color-white);
@@ -427,7 +427,6 @@ background: var(--brand-color-cornflower);
     font-size: 56px;
   }
 }
-
 .btn-hero {
   color: var(--brand-color-white);
   background-color: var(--brand-color-iris);
@@ -470,7 +469,7 @@ background: var(--brand-color-cornflower);
 @media only screen and (min-width: 428px) and (max-width: 767px) {
   .futures-box {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     margin-bottom: 8px;
     gap: 24px;
@@ -534,8 +533,9 @@ background: var(--brand-color-cornflower);
 @media only screen and (min-width: 428px) {
   .futures-title {
     color: var(--brand-color-navy);
-    font-weight: 500;
+    font-weight: 700;
     font-size: 36px;
+    line-height: 40px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     margin-bottom: 8px;
@@ -545,7 +545,10 @@ background: var(--brand-color-cornflower);
 
 @media only screen and (min-width: 1158px) {
   .futures-title {
+    font-weight: 500;
     font-size: 20px;
+    line-height: 24px;
+    text-align: left;
   }
 }
 
@@ -1598,6 +1601,10 @@ background: var(--brand-color-cornflower);
 }
 .mobile-nav-menu:hover,
 .mobile-nav-menu:focus {
+  color: var(--brand-color-ocean);
+}
+
+.mobile-nav-menu.current {
   color: var(--brand-color-ocean);
 }
 
