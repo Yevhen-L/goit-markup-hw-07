@@ -721,6 +721,7 @@ button {
   line-height: 1.2;
   text-align: center;
   letter-spacing: 0.02em;
+  margin-top: 32px;
 }
 .text-card {
   color: var(--brand-color-slate);
