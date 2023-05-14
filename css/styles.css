@@ -1819,7 +1819,7 @@ button {
   padding: 0;
   display: flex;
   /* justify-content: center; */
-  gap: 16px;
+  gap: 56px;
 }
 
 .mobil-menu-tel {
@@ -1831,14 +1831,14 @@ button {
   color: var(--brand-color-iris);
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 428px) {
   .mobil-menu-tel {
     font-size: 20px;
   }
 }
-@media only screen and (min-width: 320px) and (max-width: 428px) {
+@media only screen and (min-width: 428px) {
   .mobil-menu-tel {
-    font-size: 24px;
+    font-size: 36px;
   }
 }
 
