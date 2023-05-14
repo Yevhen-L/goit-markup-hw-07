@@ -871,17 +871,11 @@ button {
   }
 }
 
-/* @media only screen and (max-width: 428px) {
+@media only screen and (min-width: 768px) and (max-width: 1158px) {
   .customers-box-icons {
-    width: 396px;
+    width: 584px;
   }
-} */
-
-/* @media only screen and (max-width: 768px) {
-  .customers-box-icons {
-    width: 552px;
-  }
-} */
+}
 
 .customers-title {
   line-height: 1.1;
@@ -892,12 +886,9 @@ button {
 @media only screen and (max-width: 428px) {
   .customers-list {
     display: flex;
-    /* flex-direction: column;
-    row-gap: 72px; */
-    flex-direction: row;
-    gap: 24px;
+    gap: 72px 16px;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
   }
 }
 
@@ -907,9 +898,7 @@ button {
     flex-direction: row;
     gap: 72px 16px;
     flex-wrap: wrap;
-    width: 396px;
-    margin-left: auto;
-    margin-right: auto;
+    justify-content: center;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -917,7 +906,7 @@ button {
     display: flex;
     gap: 72px 24px;
     flex-wrap: wrap;
-    width: 552px;
+    /* width: 552px; */
   }
 }
 @media only screen and (min-width: 1158px) {
@@ -926,6 +915,7 @@ button {
     padding: 0;
     flex-wrap: nowrap;
     width: 100%;
+    gap: 24px;
   }
 }
 
@@ -936,6 +926,13 @@ button {
   color: var(--brand-color-ocean);
   border: 1px solid var(--brand-color-ocean);
 }
+
+@media only screen and (max-width: 427px) {
+  .customers-item {
+    width: calc((100vw - 48px) / 2);
+  }
+}
+
 @media only screen and (min-width: 428px) {
   .customers-item {
     width: 190px;
@@ -1832,7 +1829,6 @@ button {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--brand-color-iris);
-  padding-bottom: 40px;
 }
 
 @media only screen and (max-width: 320px) {
@@ -1852,10 +1848,12 @@ button {
   line-height: 24px;
   letter-spacing: 0.02em;
   color: var(--brand-color-slate);
-  padding-bottom: 48px;
 }
 .mobil-menu-contacts {
-  /* margin-bottom: ; */
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 48px;
 }
 .mobil-social-icons {
   display: flex;
