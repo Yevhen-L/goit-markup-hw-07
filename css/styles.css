@@ -480,7 +480,7 @@ button {
   margin-left: auto;
   margin-right: auto;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .hero-text {
     max-width: 320px;
     font-size: 36px;
