@@ -1411,7 +1411,8 @@ button {
 
 @media only screen and (max-width: 427px) {
   .footer-user-email {
-    min-width: 284px;
+    width: calc(100vw - 36px);
+    /* min-width: 284px; */
   }
 }
 @media only screen and (min-width: 428px) and (max-width: 767px) {
