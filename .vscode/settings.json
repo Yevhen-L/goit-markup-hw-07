@@ -1,3 +1,5 @@
 {
-  "editor.guides.bracketPairs": "active"
+  "editor.guides.bracketPairs": "active",
+  "materialTheme.accent": "Blue",
+  "liveServer.settings.port": 5501
 }
